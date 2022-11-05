@@ -1,0 +1,7 @@
+<div id="map"></div>
+
+<div id="dropdown-container"> 
+    <select [(ngModel)]="selectedLevel" (change)="selected()">
+        <option [value]='season' *ngFor="let season of seasons">{{season}}</option>
+    </select>
+</div>
