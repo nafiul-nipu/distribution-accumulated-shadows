@@ -84,8 +84,9 @@ export class MapComponent implements AfterViewInit {
     let winterSource = new RasterSource({
       sources: [
         new XYZ({
-          url: environment.filesurl + this.winter.path,
+          url: 'https://raw.githubusercontent.com/nafiul-nipu/distribution-accumulated-shadows/main/docs/'+environment.filesurl + this.winter.path,
           tileGrid: createXYZ({tileSize: 256, minZoom: 15, maxZoom: 15}),
+          crossOrigin: 'anonymous'
         })
       ],
       operation: function(pixels: any, data: any): any {
@@ -109,6 +110,7 @@ export class MapComponent implements AfterViewInit {
 
     this.winterLayer.on('postrender', (event: any) => {
       var ctx = event.context;
+      // console.log(ctx);
       var pixelRatio = event.frameState.pixelRatio;
       if (this.mousePosition) {
         var x = this.mousePosition[0] * pixelRatio;
@@ -127,8 +129,9 @@ export class MapComponent implements AfterViewInit {
     let springSource = new RasterSource({
       sources: [
         new XYZ({
-          url: environment.filesurl + this.spring.path,
+          url: 'https://raw.githubusercontent.com/nafiul-nipu/distribution-accumulated-shadows/main/docs/'+environment.filesurl + this.spring.path,
           tileGrid: createXYZ({tileSize: 256, minZoom: 15, maxZoom: 15}),
+          crossOrigin: 'anonymous'
         })
       ],
       operation: function(pixels: any, data: any): any {
@@ -171,8 +174,9 @@ export class MapComponent implements AfterViewInit {
     let summerSource = new RasterSource({
       sources: [
         new XYZ({
-          url: environment.filesurl + this.summer.path,
+          url: 'https://raw.githubusercontent.com/nafiul-nipu/distribution-accumulated-shadows/main/docs/'+environment.filesurl + this.summer.path,
           tileGrid: createXYZ({tileSize: 256, minZoom: 15, maxZoom: 15}),
+          crossOrigin: 'anonymous'
         })
       ],
       operation: function(pixels: any, data: any): any {
