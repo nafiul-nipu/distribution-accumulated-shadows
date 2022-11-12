@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  filesurl: 'https://github.com/nafiul-nipu/distribution-accumulated-shadows/tree/main/docs/assets/'
+  filesurl: 'https://raw.githubusercontent.com/nafiul-nipu/distribution-accumulated-shadows/main/shadow-maps/src/assets/'
 };
